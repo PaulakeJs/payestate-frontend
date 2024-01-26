@@ -29,9 +29,9 @@ function App() {
           <Route
             path="/"
             element={
-              <Proctected>
+              
                 <Home />
-              </Proctected>
+              
             }
           />
           <Route path="/explore" element={<General />} />
