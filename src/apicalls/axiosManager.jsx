@@ -1,15 +1,11 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
+export const axiosManager = axios.create({
+  baseURL: '/api', // Set the base URL to the proxied API path
+});
 
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    proxy: {
-      '/api': {
-        target: 'http://localhost:7000',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-    },
-  },
+axiosManager.interceptors.request.use((config) => {
+  const token = localStorage.getItem("token");
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
 });
