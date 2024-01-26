@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const axiosManager = axios.create({
   baseURL: '/api', // Set the base URL to the proxied API path
 });
