@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  background-color: whitesmoke;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/* Style all buttons, including those in Ant Design modal */
+/* Style buttons in Ant Design modal */
+.ant-modal-content button,
+.ant-btn {
+    background-color: orange !important; /* Set your desired background color */
+    background-image: none !important;
+    /* Add other styles as needed */
+}
+
+/* Style specific buttons in Ant Design modal with a custom class */
+.ant-modal-btn {
+    /* Your specific styles for buttons inside Ant Design modal */
+}
+
+input,
+select,
+textarea {
+  min-height: 30px !important;
+  background: transparent !important;
+  border: 0.5px solid solid #ccc !important;
+  width: 100%;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none !important;
+  border: 0.5px solid #ccc !important;
+  box-shadow: none !important;
+}
+.menu {
+  padding: 10px 30px;
+  width: 230px !important;
+}
+button [type="button"] {
+  background-color: blue !important;
+}
+button:hover {
+  background: transparent !important;
+  color: black !important;
+  outline: none !important;
+}
+@media (min-width: 650px) {
+  .banner {
+    background-image: url("/banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
