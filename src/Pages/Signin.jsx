@@ -42,7 +42,7 @@ const Signin = () => {
           </p>
           <Form onFinish={login} layout="vertical">
             <Form.Item label="Enter Email Address" name={"email"}>
-              <Input type="text" />
+              <Input type="email" />
             </Form.Item>
 
             <Form.Item label="Password" name={"password"}>
