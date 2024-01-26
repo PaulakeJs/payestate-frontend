@@ -53,7 +53,7 @@ const Signup = () => {
             </Form.Item>
 
             <Form.Item label="Enter Email Address" rules={rules} name={"email"}>
-              <Input type="text" />
+              <Input type="email" />
             </Form.Item>
             <Form.Item label="Phone" rules={rules} name={"phone"}>
               <Input type="number" />
